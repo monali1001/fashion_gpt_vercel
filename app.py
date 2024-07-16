@@ -16,9 +16,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'AIzaSyB-KxlE38SR5ChV_5A7Wxp67VbQvumf8q8'
 CORS(app)  # Enable CORS for all routes
 
-# @app.route('/')
-# def index():
-#     return "Hi Pretty girls this is recommendation helper for you. Use /api/recommendations endpoint to get recommendations."
+@app.route('/ping')
+def ping():
+    return "pong"
 
 
 def get_gemini_response(question):
